@@ -1,0 +1,16 @@
+{
+  "total_runs": 1,
+  "successful_runs": 0,
+  "overall_success_rate": 0.0,
+  "java_runs": 1,
+  "java_success_rate": 0.0,
+  "constraint_violation_rate": 1.0,
+  "critical_constraint_violation_rate": 1.0,
+  "total_cost_usd": 0.0,
+  "cost_per_success_usd": null,
+  "p50_latency_seconds": 0.0,
+  "p90_latency_seconds": 0.0,
+  "p95_latency_seconds": 0.0,
+  "stability_score": 1.0,
+  "task_count": 1
+}

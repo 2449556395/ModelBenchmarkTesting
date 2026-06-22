@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "run_id": "java-exception-mapping__verify-test__r1__5c4ec9df",
+      "task_id": "java-exception-mapping",
+      "language": "java",
+      "category": "feature_change",
+      "difficulty": "medium",
+      "model": "verify-test",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 121,
+      "output_tokens": 25,
+      "latency_seconds": 1.6689300537109375e-06,
+      "total_seconds": 3.432996988296509,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 3.4131529331207275
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-exception-mapping__verify-test__r1__5c4ec9df",
+      "model_display_name": "verify-test",
+      "web_job_id": "web_8eacb04adf3f"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "run_id": "java-exception-mapping__verify-test__r1__error__80ea2435",
+      "task_id": "java-exception-mapping",
+      "language": "java",
+      "category": "feature_change",
+      "difficulty": "medium",
+      "model": "verify-test",
+      "repetition": 1,
+      "success": false,
+      "public_tests_pass": false,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "critical",
+          "type": "runner_exception",
+          "message": "HTTP Error 404: Not Found"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "latency_seconds": 0.0,
+      "total_seconds": 0.0,
+      "test_results": [],
+      "human_review": {},
+      "work_dir": null,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

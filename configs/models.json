@@ -1,0 +1,23 @@
+{
+  "models": {
+    "mock": {
+      "type": "mock",
+      "input_cost_per_1k": 0.0,
+      "output_cost_per_1k": 0.0
+    },
+    "openai-compatible-example": {
+      "type": "openai_compatible",
+      "base_url": "https://api.example.com/v1/chat/completions",
+      "api_key_env": "MODEL_API_KEY",
+      "model": "vendor/model-name",
+      "input_cost_per_1k": 0.001,
+      "output_cost_per_1k": 0.003
+    },
+    "local-http-example": {
+      "type": "local_http",
+      "url": "http://localhost:8000/generate",
+      "input_cost_per_1k": 0.0,
+      "output_cost_per_1k": 0.0
+    }
+  }
+}

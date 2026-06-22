@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+# Lightweight local wrapper for benchmark smoke tests when Gradle is unavailable.
+exec mvn -q test

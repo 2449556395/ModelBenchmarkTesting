@@ -1,0 +1,47 @@
+{
+  "id": "java-invoice-junit-tests",
+  "language": "java",
+  "framework": [
+    "junit5",
+    "mockito",
+    "maven"
+  ],
+  "difficulty": "medium",
+  "category": "test_completion",
+  "prompt": "为 InvoiceService 补充成功、失败、异常和空输入测试，不访问真实数据库。\n\nReal repo context: The repo contains invoice domain code with success, empty, and validation branches suitable for JUnit expansion.",
+  "commands": {
+    "setup": [],
+    "test": [
+      "mvn -q test"
+    ]
+  },
+  "constraints": {
+    "human": [
+      "不允许删除或跳过测试",
+      "不允许修改公开 API，除非任务明确要求",
+      "必须遵循项目现有代码风格",
+      "必须最小化改动范围"
+    ],
+    "forbid_modify": [
+      "hidden_tests/**",
+      "src/test/resources/golden/**"
+    ],
+    "forbid_patterns": [
+      "-DskipTests",
+      "maven.test.skip",
+      "@Disabled",
+      "@Ignore",
+      "TODO Auto-generated"
+    ],
+    "require_files_changed": [
+      "src/test/**"
+    ]
+  },
+  "limits": {
+    "timeout_seconds": 900,
+    "max_cost_usd": 5.0,
+    "max_iterations": 3
+  },
+  "real_repo": true,
+  "repo_notes": "Contains a Java 8 compatible Maven project with production code and JUnit 5 tests."
+}

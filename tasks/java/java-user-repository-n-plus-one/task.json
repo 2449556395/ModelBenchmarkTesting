@@ -1,0 +1,45 @@
+{
+  "id": "java-user-repository-n-plus-one",
+  "language": "java",
+  "framework": [
+    "jpa",
+    "spring-data",
+    "maven"
+  ],
+  "difficulty": "hard",
+  "category": "data_access",
+  "prompt": "优化 UserRepository 查询避免 N+1，保持返回结果一致并增加集成测试。\n\nReal repo context: Repository task models N+1 avoidance through a batch gateway and verifies a single data access call.",
+  "commands": {
+    "setup": [],
+    "test": [
+      "mvn -q test"
+    ]
+  },
+  "constraints": {
+    "human": [
+      "不允许删除或跳过测试",
+      "不允许修改公开 API，除非任务明确要求",
+      "必须遵循项目现有代码风格",
+      "必须最小化改动范围"
+    ],
+    "forbid_modify": [
+      "hidden_tests/**",
+      "src/test/resources/golden/**"
+    ],
+    "forbid_patterns": [
+      "-DskipTests",
+      "maven.test.skip",
+      "@Disabled",
+      "@Ignore",
+      "TODO Auto-generated"
+    ],
+    "require_files_changed": []
+  },
+  "limits": {
+    "timeout_seconds": 900,
+    "max_cost_usd": 5.0,
+    "max_iterations": 3
+  },
+  "real_repo": true,
+  "repo_notes": "Contains a Java 8 compatible Maven project with production code and JUnit 5 tests."
+}

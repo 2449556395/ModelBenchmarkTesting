@@ -1,0 +1,17 @@
+{
+  "id": "web_0e567e373aca",
+  "status": "running",
+  "request": {
+    "model_name": "p2",
+    "task_ids": [],
+    "use_mock": true
+  },
+  "created_at": 1782141476.5284638,
+  "updated_at": 1782141476.530617,
+  "total_units": 20,
+  "completed_units": 0,
+  "current_task": "java-coupon-bugfix",
+  "results": [],
+  "summary": {},
+  "error": null
+}

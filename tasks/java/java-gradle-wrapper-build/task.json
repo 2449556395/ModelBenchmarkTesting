@@ -1,0 +1,44 @@
+{
+  "id": "java-gradle-wrapper-build",
+  "language": "java",
+  "framework": [
+    "gradle",
+    "junit5"
+  ],
+  "difficulty": "medium",
+  "category": "build_fix",
+  "prompt": "修复 Gradle wrapper 项目构建配置，禁止跳过测试。\n\nReal repo context: The local environment lacks Gradle, so the repo remains Maven-verifiable and includes a lightweight gradlew smoke-test script.",
+  "commands": {
+    "setup": [],
+    "test": [
+      "mvn -q test"
+    ]
+  },
+  "constraints": {
+    "human": [
+      "不允许删除或跳过测试",
+      "不允许修改公开 API，除非任务明确要求",
+      "必须遵循项目现有代码风格",
+      "必须最小化改动范围"
+    ],
+    "forbid_modify": [
+      "hidden_tests/**",
+      "src/test/resources/golden/**"
+    ],
+    "forbid_patterns": [
+      "-DskipTests",
+      "maven.test.skip",
+      "@Disabled",
+      "@Ignore",
+      "TODO Auto-generated"
+    ],
+    "require_files_changed": []
+  },
+  "limits": {
+    "timeout_seconds": 900,
+    "max_cost_usd": 5.0,
+    "max_iterations": 3
+  },
+  "real_repo": true,
+  "repo_notes": "Contains a Java 8 compatible Maven project with production code and JUnit 5 tests."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "java-mybatis-sql-injection",
+  "language": "java",
+  "framework": [
+    "mybatis",
+    "maven"
+  ],
+  "difficulty": "hard",
+  "category": "security",
+  "prompt": "修复 MyBatis 动态查询 SQL 注入风险，不允许直接拼接用户输入。\n\nReal repo context: SQL generation uses bind parameters and sort-column whitelisting to simulate MyBatis mapper safety.",
+  "commands": {
+    "setup": [],
+    "test": [
+      "mvn -q test"
+    ]
+  },
+  "constraints": {
+    "human": [
+      "不允许删除或跳过测试",
+      "不允许修改公开 API，除非任务明确要求",
+      "必须遵循项目现有代码风格",
+      "必须最小化改动范围"
+    ],
+    "forbid_modify": [
+      "hidden_tests/**",
+      "src/test/resources/golden/**"
+    ],
+    "forbid_patterns": [
+      "-DskipTests",
+      "maven.test.skip",
+      "@Disabled",
+      "@Ignore",
+      "TODO Auto-generated"
+    ],
+    "require_files_changed": [
+      "src/test/**"
+    ]
+  },
+  "limits": {
+    "timeout_seconds": 900,
+    "max_cost_usd": 5.0,
+    "max_iterations": 3
+  },
+  "real_repo": true,
+  "repo_notes": "Contains a Java 8 compatible Maven project with production code and JUnit 5 tests."
+}

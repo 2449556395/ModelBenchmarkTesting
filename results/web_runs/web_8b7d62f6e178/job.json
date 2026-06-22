@@ -1,0 +1,66 @@
+{
+  "id": "web_8b7d62f6e178",
+  "status": "completed",
+  "request": {
+    "model_name": "verify-test",
+    "base_url": "http://127.0.0.1:18766",
+    "thinking_level": "high",
+    "task_ids": [
+      "java-exception-mapping"
+    ],
+    "mock": true
+  },
+  "created_at": 1782141308.140457,
+  "updated_at": 1782141308.2412422,
+  "total_units": 1,
+  "completed_units": 1,
+  "current_task": null,
+  "results": [
+    {
+      "run_id": "java-exception-mapping__verify-test__r1__error__1cfd2764",
+      "task_id": "java-exception-mapping",
+      "language": "java",
+      "category": "feature_change",
+      "difficulty": "medium",
+      "model": "verify-test",
+      "repetition": 1,
+      "success": false,
+      "public_tests_pass": false,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "critical",
+          "type": "runner_exception",
+          "message": "HTTP Error 404: Not Found"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "latency_seconds": 0.0,
+      "total_seconds": 0.0,
+      "test_results": [],
+      "human_review": {},
+      "work_dir": null,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "summary": {
+    "total_runs": 1,
+    "successful_runs": 0,
+    "overall_success_rate": 0.0,
+    "java_runs": 1,
+    "java_success_rate": 0.0,
+    "constraint_violation_rate": 1.0,
+    "critical_constraint_violation_rate": 1.0,
+    "total_cost_usd": 0.0,
+    "cost_per_success_usd": null,
+    "p50_latency_seconds": 0.0,
+    "p90_latency_seconds": 0.0,
+    "p95_latency_seconds": 0.0,
+    "stability_score": 1.0,
+    "task_count": 1
+  },
+  "error": null,
+  "finished_at": 1782141308.2412312
+}

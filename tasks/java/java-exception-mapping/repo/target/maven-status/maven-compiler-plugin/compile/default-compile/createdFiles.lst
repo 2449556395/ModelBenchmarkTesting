@@ -1,0 +1,4 @@
+com/example/benchmark/ExceptionMapping$ValidationException.class
+com/example/benchmark/ExceptionMapping.class
+com/example/benchmark/ExceptionMapping$ApiError.class
+com/example/benchmark/ExceptionMapping$NotFoundException.class

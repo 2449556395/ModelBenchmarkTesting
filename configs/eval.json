@@ -1,0 +1,10 @@
+{
+  "task_root": "tasks",
+  "results_raw_dir": "results/raw",
+  "reports_dir": "results/reports",
+  "default_repetitions": 1,
+  "required_java_ratio": 0.8,
+  "default_timeout_seconds": 900,
+  "network_allowed": false,
+  "max_iterations": 3
+}

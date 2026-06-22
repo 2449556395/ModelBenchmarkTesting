@@ -1,0 +1,47 @@
+{
+  "id": "java-date-time-bug",
+  "language": "java",
+  "framework": [
+    "java-time",
+    "junit5",
+    "maven"
+  ],
+  "difficulty": "easy",
+  "category": "bugfix",
+  "prompt": "修复跨时区日期计算错误并添加 DST/UTC 测试。\n\nReal repo context: Date handling must use java.time and caller-provided ZoneId/Clock, not system defaults.",
+  "commands": {
+    "setup": [],
+    "test": [
+      "mvn -q test"
+    ]
+  },
+  "constraints": {
+    "human": [
+      "不允许删除或跳过测试",
+      "不允许修改公开 API，除非任务明确要求",
+      "必须遵循项目现有代码风格",
+      "必须最小化改动范围"
+    ],
+    "forbid_modify": [
+      "hidden_tests/**",
+      "src/test/resources/golden/**"
+    ],
+    "forbid_patterns": [
+      "-DskipTests",
+      "maven.test.skip",
+      "@Disabled",
+      "@Ignore",
+      "TODO Auto-generated"
+    ],
+    "require_files_changed": [
+      "src/test/**"
+    ]
+  },
+  "limits": {
+    "timeout_seconds": 900,
+    "max_cost_usd": 5.0,
+    "max_iterations": 3
+  },
+  "real_repo": true,
+  "repo_notes": "Contains a Java 8 compatible Maven project with production code and JUnit 5 tests."
+}

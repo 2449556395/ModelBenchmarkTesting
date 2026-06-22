@@ -1,0 +1,36 @@
+{
+  "id": "web_34f4d3dbf017",
+  "status": "failed",
+  "request": {
+    "model_name": "p3",
+    "task_ids": [
+      "does-not-exist"
+    ],
+    "use_mock": true
+  },
+  "created_at": 1782141476.5541818,
+  "updated_at": 1782141476.558439,
+  "total_units": 0,
+  "completed_units": 0,
+  "current_task": null,
+  "results": [],
+  "summary": {
+    "total_runs": 0,
+    "successful_runs": 0,
+    "overall_success_rate": null,
+    "java_runs": 0,
+    "java_success_rate": null,
+    "constraint_violation_rate": null,
+    "critical_constraint_violation_rate": null,
+    "total_cost_usd": 0,
+    "cost_per_success_usd": null,
+    "p50_latency_seconds": null,
+    "p90_latency_seconds": null,
+    "p95_latency_seconds": null,
+    "stability_score": null,
+    "task_count": 0
+  },
+  "error": "unknown task id: does-not-exist",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/zhengkai/test/ModelBenchmarkTesting/evaluator/web_app.py\", line 209, in run_job\n    raise ValueError(f\"unknown task id: {task_id}\")\nValueError: unknown task id: does-not-exist\n",
+  "finished_at": 1782141476.558424
+}

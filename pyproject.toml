@@ -1,0 +1,10 @@
+[project]
+name = "model-code-eval"
+version = "0.1.0"
+description = "Vendor-neutral code model evaluation framework focused on Java engineering tasks"
+requires-python = ">=3.9"
+
+[tool.model_code_eval]
+java_task_ratio = 0.8
+# Web console uses Python standard library:
+# python3 -m evaluator.web_app --host 127.0.0.1 --port 8765

@@ -1,0 +1,40 @@
+{
+  "id": "github-actions-build-fix",
+  "language": "yaml",
+  "framework": [
+    "github-actions"
+  ],
+  "difficulty": "easy",
+  "category": "build_fix",
+  "prompt": "修复 CI workflow，禁止简单跳过测试。",
+  "commands": {
+    "setup": [],
+    "test": [
+      "python3 -m py_compile ."
+    ]
+  },
+  "constraints": {
+    "human": [
+      "不允许删除或跳过测试",
+      "不允许修改公开 API，除非任务明确要求",
+      "必须遵循项目现有代码风格",
+      "必须最小化改动范围"
+    ],
+    "forbid_modify": [
+      "hidden_tests/**",
+      "src/test/resources/golden/**"
+    ],
+    "forbid_patterns": [
+      "-DskipTests",
+      "maven.test.skip",
+      "@Disabled",
+      "@Ignore"
+    ],
+    "require_files_changed": []
+  },
+  "limits": {
+    "timeout_seconds": 900,
+    "max_cost_usd": 5.0,
+    "max_iterations": 3
+  }
+}
