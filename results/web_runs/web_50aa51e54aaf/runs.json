@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "run_id": "java-coupon-bugfix__gpt-5.5__r1__b62a81e6",
+      "task_id": "java-coupon-bugfix",
+      "language": "java",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "model": "gpt-5.5",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 113,
+      "output_tokens": 25,
+      "latency_seconds": 2.1457672119140625e-06,
+      "total_seconds": 2.8349077701568604,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 2.8216710090637207
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-coupon-bugfix__gpt-5.5__r1__b62a81e6",
+      "model_display_name": "gpt-5.5",
+      "web_job_id": "web_50aa51e54aaf"
+    }
+  ]
+}

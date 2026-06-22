@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "run_id": "java-coupon-bugfix__mock__r1__9f792385",
+      "task_id": "java-coupon-bugfix",
+      "language": "java",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "model": "mock",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 113,
+      "output_tokens": 25,
+      "latency_seconds": 2.1457672119140625e-06,
+      "total_seconds": 3.4202210903167725,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 3.403702735900879
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-coupon-bugfix__mock__r1__9f792385",
+      "model_display_name": "mock",
+      "web_job_id": "web_9459648bd5f7"
+    }
+  ]
+}

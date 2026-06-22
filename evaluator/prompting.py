@@ -30,5 +30,32 @@ Constraints:
 Repository snapshot:
 {chr(10).join(files[:80])}
 
-Return either a unified diff or precise file replacement instructions. Do not delete tests, skip tests, or violate constraints.
+Required response format:
+You MUST return actual code changes in one of the following machine-applicable formats.
+
+Option A: unified diff, preferably fenced as ```diff. Example:
+```diff
+diff --git a/src/main/java/example/Foo.java b/src/main/java/example/Foo.java
+--- a/src/main/java/example/Foo.java
++++ b/src/main/java/example/Foo.java
+@@ -1,3 +1,3 @@
+- old code
++ new code
+```
+
+Option B: JSON file edits, fenced as ```json. Example:
+```json
+{{
+  "edits": [
+    {{"path": "src/main/java/example/Foo.java", "content": "full replacement file content here"}}
+  ]
+}}
+```
+
+Important scoring rules:
+- A plain explanation is not enough and will fail.
+- If your response cannot be applied as a patch or JSON edits, the task fails.
+- If no files are changed, the task fails.
+- The final code must pass the configured tests such as Maven/JUnit.
+- Do not delete tests, skip tests, disable tests, or violate constraints.
 """.strip()

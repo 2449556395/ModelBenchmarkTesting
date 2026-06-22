@@ -1,0 +1,87 @@
+{
+  "id": "web_50aa51e54aaf",
+  "status": "completed",
+  "request": {
+    "use_mock": true,
+    "model_name": "gpt-5.5",
+    "model_id": "gpt-5.5",
+    "base_url": "https://api.psydo.top",
+    "thinking_level": "high",
+    "input_cost_per_1k": 0.5,
+    "output_cost_per_1k": 3,
+    "repetitions": 1,
+    "temperature": 0.2,
+    "timeout_seconds": 120,
+    "task_ids": [
+      "java-coupon-bugfix"
+    ]
+  },
+  "created_at": 1782142721.427825,
+  "updated_at": 1782142724.354497,
+  "total_units": 1,
+  "completed_units": 1,
+  "current_task": null,
+  "results": [
+    {
+      "run_id": "java-coupon-bugfix__gpt-5.5__r1__b62a81e6",
+      "task_id": "java-coupon-bugfix",
+      "language": "java",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "model": "gpt-5.5",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 113,
+      "output_tokens": 25,
+      "latency_seconds": 2.1457672119140625e-06,
+      "total_seconds": 2.8349077701568604,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 2.8216710090637207
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-coupon-bugfix__gpt-5.5__r1__b62a81e6",
+      "model_display_name": "gpt-5.5",
+      "web_job_id": "web_50aa51e54aaf"
+    }
+  ],
+  "summary": {
+    "total_runs": 1,
+    "successful_runs": 1,
+    "overall_success_rate": 1.0,
+    "java_runs": 1,
+    "java_success_rate": 1.0,
+    "constraint_violation_rate": 1.0,
+    "critical_constraint_violation_rate": 0.0,
+    "total_cost_usd": 0.0,
+    "cost_per_success_usd": 0.0,
+    "p50_latency_seconds": 2.1457672119140625e-06,
+    "p90_latency_seconds": 2.1457672119140625e-06,
+    "p95_latency_seconds": 2.1457672119140625e-06,
+    "stability_score": 1.0,
+    "task_count": 1
+  },
+  "error": null,
+  "finished_at": 1782142724.354487
+}

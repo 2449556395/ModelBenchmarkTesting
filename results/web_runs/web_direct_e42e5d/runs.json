@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "run_id": "java-coupon-bugfix__mock__r1__bd94167b",
+      "task_id": "java-coupon-bugfix",
+      "language": "java",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "model": "mock",
+      "repetition": 1,
+      "success": false,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 307,
+      "output_tokens": 25,
+      "latency_seconds": 3.814697265625e-06,
+      "total_seconds": 4.684902906417847,
+      "baseline_test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 2.4366610050201416
+        }
+      ],
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 2.151968002319336
+        }
+      ],
+      "patch_method": "none",
+      "patch_applied": false,
+      "patch_error": "model response did not contain a unified diff or JSON edits",
+      "files_changed": [],
+      "final_diff": "",
+      "failure_reasons": [
+        "patch_not_applied",
+        "no_files_changed",
+        "major_or_critical_constraint_violation"
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-coupon-bugfix__mock__r1__bd94167b",
+      "model_display_name": "mock",
+      "web_job_id": "web_direct_e42e5d"
+    }
+  ]
+}

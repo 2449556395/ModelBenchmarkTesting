@@ -470,10 +470,15 @@ function renderJob(job){
 
   const rows = job.results || [];
   document.querySelector('#runsTable thead').innerHTML =
-    '<tr><th>题目</th><th>语言</th><th>成功</th><th>测试</th><th>违规</th><th>成本</th><th>延迟</th><th>错误</th></tr>';
-  document.querySelector('#runsTable tbody').innerHTML = rows.map(r =>
-    `<tr><td>${esc(r.task_id)}</td><td>${esc(r.language)}</td><td class="${r.success?'ok':'bad'}">${r.success?'PASS':'FAIL'}</td><td>${r.public_tests_pass?'PASS':'FAIL'}</td><td>${(r.constraint_violations||[]).length}</td><td>${fmtNum(r.cost_usd)}</td><td>${fmtNum(r.latency_seconds)}</td><td class="bad">${esc(r.error || '')}</td></tr>`
-  ).join('');
+    '<tr><th>题目</th><th>语言</th><th>成功</th><th>测试</th><th>Patch</th><th>修改文件</th><th>失败原因</th><th>违规</th><th>成本</th><th>延迟</th><th>Diff/错误</th></tr>';
+  document.querySelector('#runsTable tbody').innerHTML = rows.map(r => {
+    const files = (r.files_changed || []).join('<br>');
+    const reasons = (r.failure_reasons || []).join('<br>');
+    const patchState = r.patch_applied ? 'APPLIED' : 'NOT APPLIED';
+    const diffPreview = (r.final_diff || '').slice(0, 1200);
+    const detail = r.patch_error || r.error || diffPreview || '';
+    return `<tr><td>${esc(r.task_id)}</td><td>${esc(r.language)}</td><td class="${r.success?'ok':'bad'}">${r.success?'PASS':'FAIL'}</td><td>${r.public_tests_pass?'PASS':'FAIL'}</td><td class="${r.patch_applied?'ok':'bad'}">${patchState}<br><span class="muted">${esc(r.patch_method || '')}</span></td><td>${files || '-'}</td><td class="bad">${reasons || '-'}</td><td>${(r.constraint_violations||[]).length}</td><td>${fmtNum(r.cost_usd)}</td><td>${fmtNum(r.latency_seconds)}</td><td><pre style="max-height:180px">${esc(detail)}</pre></td></tr>`;
+  }).join('');
 }
 
 loadTasks().catch(err => { document.getElementById('taskList').textContent = String(err); });

@@ -1,0 +1,133 @@
+{
+  "results": [
+    {
+      "run_id": "java-coupon-bugfix__gpt-5.5__r1__fcc67d18",
+      "task_id": "java-coupon-bugfix",
+      "language": "java",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "model": "gpt-5.5",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 113,
+      "output_tokens": 25,
+      "latency_seconds": 1.9073486328125e-06,
+      "total_seconds": 1.9448661804199219,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 1.9316699504852295
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-coupon-bugfix__gpt-5.5__r1__fcc67d18",
+      "model_display_name": "gpt-5.5",
+      "web_job_id": "web_69e204047e6a"
+    },
+    {
+      "run_id": "java-date-time-bug__gpt-5.5__r1__aa7a16e0",
+      "task_id": "java-date-time-bug",
+      "language": "java",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "model": "gpt-5.5",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 113,
+      "output_tokens": 25,
+      "latency_seconds": 9.5367431640625e-07,
+      "total_seconds": 1.7934348583221436,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 1.7808740139007568
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-date-time-bug__gpt-5.5__r1__aa7a16e0",
+      "model_display_name": "gpt-5.5",
+      "web_job_id": "web_69e204047e6a"
+    },
+    {
+      "run_id": "java-exception-mapping__gpt-5.5__r1__8b6bf769",
+      "task_id": "java-exception-mapping",
+      "language": "java",
+      "category": "feature_change",
+      "difficulty": "medium",
+      "model": "gpt-5.5",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 121,
+      "output_tokens": 25,
+      "latency_seconds": 1.6689300537109375e-06,
+      "total_seconds": 1.7289080619812012,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 1.7162129878997803
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-exception-mapping__gpt-5.5__r1__8b6bf769",
+      "model_display_name": "gpt-5.5",
+      "web_job_id": "web_69e204047e6a"
+    }
+  ]
+}

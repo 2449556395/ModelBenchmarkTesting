@@ -1,0 +1,81 @@
+{
+  "id": "web_9459648bd5f7",
+  "status": "completed",
+  "request": {
+    "use_mock": true,
+    "model_name": "mock",
+    "model_id": "mock",
+    "task_ids": [
+      "java-coupon-bugfix"
+    ],
+    "repetitions": 1
+  },
+  "created_at": 1782144975.644337,
+  "updated_at": 1782144979.164923,
+  "total_units": 1,
+  "completed_units": 1,
+  "current_task": null,
+  "results": [
+    {
+      "run_id": "java-coupon-bugfix__mock__r1__9f792385",
+      "task_id": "java-coupon-bugfix",
+      "language": "java",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "model": "mock",
+      "repetition": 1,
+      "success": true,
+      "public_tests_pass": true,
+      "hidden_tests_pass": null,
+      "constraint_violations": [
+        {
+          "severity": "major",
+          "type": "required_change_missing",
+          "detail": "src/test/**"
+        }
+      ],
+      "cost_usd": 0.0,
+      "input_tokens": 113,
+      "output_tokens": 25,
+      "latency_seconds": 2.1457672119140625e-06,
+      "total_seconds": 3.4202210903167725,
+      "test_results": [
+        {
+          "command": "mvn -q test",
+          "exit_code": 0,
+          "output": "",
+          "seconds": 3.403702735900879
+        }
+      ],
+      "human_review": {
+        "readability": null,
+        "minimal_change": null,
+        "design": null,
+        "test_quality": null,
+        "security": null,
+        "project_style": null
+      },
+      "work_dir": ".work/java-coupon-bugfix__mock__r1__9f792385",
+      "model_display_name": "mock",
+      "web_job_id": "web_9459648bd5f7"
+    }
+  ],
+  "summary": {
+    "total_runs": 1,
+    "successful_runs": 1,
+    "overall_success_rate": 1.0,
+    "java_runs": 1,
+    "java_success_rate": 1.0,
+    "constraint_violation_rate": 1.0,
+    "critical_constraint_violation_rate": 0.0,
+    "total_cost_usd": 0.0,
+    "cost_per_success_usd": 0.0,
+    "p50_latency_seconds": 2.1457672119140625e-06,
+    "p90_latency_seconds": 2.1457672119140625e-06,
+    "p95_latency_seconds": 2.1457672119140625e-06,
+    "stability_score": 1.0,
+    "task_count": 1
+  },
+  "error": null,
+  "finished_at": 1782144979.164911
+}

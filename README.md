@@ -104,3 +104,10 @@ python3 -m evaluator.web_app --host 127.0.0.1 --port 8765
 Then open `http://127.0.0.1:8765`. The page lets you enter model name, API key, base URL, thinking level, prices, repetitions, and selected tasks. It runs real engineering tasks and shows success rate, Java success rate, constraint violations, cost, latency, stability, and per-task details.
 
 Security: API keys are used in memory for the active run and are not written to result files. See `docs/web_console.md` for details.
+
+### Real AI edit scoring
+
+The evaluator now requires models to return machine-applicable code changes. The runner applies unified diffs or JSON file edits, records `patch_applied`, `files_changed`, `final_diff`, and `failure_reasons`, then runs the configured tests.
+
+A task is successful only when the model actually changes files, the modified code passes tests, and there are no major or critical constraint violations. Plain explanations or no-op responses fail.
+
